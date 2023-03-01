@@ -5,6 +5,7 @@ const cors = require('cors')
 
 const authController = require('./controllers/auth');
 const blogController = require('./controllers/blog');
+const categoryController = require("./controllers/category");
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(express.urlencoded({extended: true}))
 // routes
 app.use('/auth', authController)
 app.use('/blog', blogController)
+app.use('/category', categoryController)
 
 //connect db
 mongoose

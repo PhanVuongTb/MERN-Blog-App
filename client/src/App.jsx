@@ -1,14 +1,33 @@
 import { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Create from "./pages/Create";
+import BlogDetails from "./pages/BlogDetails";
+import UpdateBlog from "./pages/UpdateBlog";
+import { useSelector } from "react-redux";
 
 import "./App.css";
+import Navbar from "./components/Navbar";
+import LayoutWeb from "./Layout/LayoutWeb";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { user } = useSelector((state) => state.auth);
 
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<LayoutWeb />}>
+          <Route index element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/blogDetails/:id" element={<BlogDetails />} />
+          <Route path="/updateBlog/:id" element={<UpdateBlog />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 

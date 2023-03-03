@@ -11,10 +11,18 @@ const Navbar = () => {
           <Link to="/">WebDevMania</Link>
         </div>
         <ul className="navbar-center">
-          <li className="navbar-listItem">Home</li>
-          <li className="navbar-listItem">About</li>
-          <li className="navbar-listItem">Contacts</li>
-          <li className="navbar-listItem">Categories</li>
+          <li className="navbar-listItem">
+            <Link>Home</Link>
+          </li>
+          <li className="navbar-listItem">
+            <Link>About</Link>
+          </li>
+          <li className="navbar-listItem">
+            <Link>Contacts</Link>
+          </li>
+          <li className="navbar-listItem">
+            <Link>Categories</Link>
+          </li>
         </ul>
         <div className="navbar-right">
           <img

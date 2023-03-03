@@ -7,9 +7,7 @@ import Create from "./pages/Create";
 import BlogDetails from "./pages/BlogDetails";
 import UpdateBlog from "./pages/UpdateBlog";
 import { useSelector } from "react-redux";
-
 import "./App.css";
-import Navbar from "./components/Navbar";
 import LayoutWeb from "./Layout/LayoutWeb";
 
 function App() {

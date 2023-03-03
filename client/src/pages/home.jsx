@@ -1,8 +1,16 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Categories from "../components/Categories";
+import FeaturedBlogs from "../components/FeaturedBlogs";
+import Newsletter from "../components/Newsletter";
 
 const home = () => {
-  return <div>home</div>;
+  return (
+    <div>
+      <FeaturedBlogs />
+      <Categories />
+      <Newsletter />
+    </div>
+  );
 };
 
 export default home;
